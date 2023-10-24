@@ -41,7 +41,10 @@ void CharMethod() {
             << ", 对应的ASCII = " << (int)ch << std::endl;
 }
 
-void BoolMethod() {}
+void BoolMethod() {
+  bool flag = 1;
+  std::cout << "v = " << flag << ", size = " << sizeof(flag) << std::endl;
+}
 
 void StringMethod() {
   // 1. C语言风格
@@ -51,7 +54,14 @@ void StringMethod() {
   std::cout << "C++语言风格；" << s << "\t大小：" << sizeof(s) << std::endl;
 }
 
+void IOMethod() {
+  int in_v;
+  std::cout << "请输入: " << std::endl;
+  std::cin >> in_v;
+  std::cout << "结果: " << in_v << std::endl;
+}
+
 int main() {
-  StringMethod();
+  IOMethod();
   return 0;
 }
